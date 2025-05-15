@@ -8,103 +8,185 @@
   <style>
     body {
       font-family: 'Pretendard', sans-serif;
-      background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
-      color: #2c2c2c;
+      background: linear-gradient(135deg, #3e327a 0%, #231e4d 100%); /* Slightly lighter dark purple */
+      color: #e0e0e0; /* Light gray for main text */
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 800px;
+      margin: 3rem auto;
+      background: #23272A; /* Very dark gray for container */
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3); /* Adjusted shadow */
       position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      color: #ffffff; /* White for main title */
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 1rem;
     }
     h2 {
-      margin-top: 2rem;
-      font-size: 1.4rem;
-      color: #1a1a1a;
+      margin-top: 0.8rem; 
+      font-size: 1.6rem; /* Slightly increased H2 size */
+      color: #f0f0f0; /* Light color for H2 */
+      display: flex;
+      align-items: center;
     }
     .emoji {
-      margin-right: 0.5rem;
+      margin-right: 0.8rem;
+      font-size: 1.7rem; /* Slightly increased emoji size */
+    }
+    p, ul {
+      font-size: 1.05rem;
+      line-height: 1.7; /* Increased line height for readability */
+      color: #cccccc; /* Slightly brighter for better contrast on new card bg */
     }
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.6rem; /* Increased bottom margin for list items */
     }
     footer {
-      margin-top: 2rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
       font-size: 0.9rem;
       text-align: center;
-      color: #888;
+      color: #a0a0a0; /* Adjusted footer color */
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
     .logo {
       position: absolute;
-      top: -40px;
-      right: -40px;
-      width: 100px;
-      opacity: 0.1;
+      top: -30px;
+      right: -30px;
+      width: 80px;
+      opacity: 0.3; /* Increased opacity for dark theme */
     }
     a {
-      color: #0066cc;
+      color: #ad8bf8; /* Slightly adjusted link color for new bg */
       text-decoration: none;
+      transition: all 0.3s ease;
     }
     a:hover {
+      color: #c5a9f9; /* Lighter purple on hover */
       text-decoration: underline;
+    }
+    .highlight {
+      background-color: rgba(44, 47, 51, 0.7); /* Darker highlight, using card bg color with alpha */
+      border-left: 4px solid #ad8bf8; /* Purple accent */
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+    .highlight p strong {
+      color: #ffffff; /* White for highlighted strong text */
+    }
+    .info-card {
+      background-color: #2C2F33; /* Dark gray for cards, slightly lighter than container */
+      border-radius: 12px;
+      padding: 1.0rem 1.2rem; /* Adjusted padding */
+      margin-bottom: 1.2rem; /* Adjusted margin */
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    }
+    .info-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.35); /* Adjusted hover shadow */
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Robot_icon_black.svg" alt="로고" class="logo">
+    
+    <img src="./banner.png" alt="해커톤 배너" class="banner">
 
-    <h1>🛠️ 해커톤 안내</h1>
+    <div class="info-card">
+      <h2><span class="emoji">📍</span>장소</h2>
+      <p>
+        SK 마이써니 @ 그랑서울 24F<br>
+        서울특별시 종로구 종로 33, 그랑서울 타워 1 (24층)
+      </p>
+      <p><a href="https://naver.me/FcmWEXwY" target="_blank">네이버 지도로 보기 ↗️</a></p>
+    </div>
 
-    <h2><span class="emoji">📍</span>장소</h2>
-    <p>
-      SK 마이써니 @ 그랑서울 24F<br>
-      서울특별시 종로구 종로 33, 그랑서울 타워 1 (24층)
-    </p>
+    <div class="info-card">
+      <h2><span class="emoji">🗓️</span>일정</h2>
+      <div style="background-color: #40454A; border-radius: 8px; padding: 12px 15px; margin-top: 10px;">
+        <p style="margin: 0;">
+          <strong>시작:</strong> 2025년 6월 14일 (금) 오전 9:00<br>
+          <strong>종료:</strong> 2025년 6월 15일 (토) 오후 6:00<br>
+          <small style="color: #a8b2c0; display: block; margin-top: 8px;">* 24시간 개방 예정</small>
+        </p>
+      </div>
+    </div>
 
-    <h2><span class="emoji">🗺️</span>찾아오는 길</h2>
-    <p>
-      <strong>지하철:</strong> 1호선 종각역 1번 출구 — 지하 통로로 연결, 도보 2분<br>
-      <strong>버스:</strong> 광교사거리·종각역 하차 (간선 101, 103, 150 외)
-    </p>
+    <div class="info-card">
+      <h2><span class="emoji">🧳</span>참가자 준비물</h2>
+      <ul>
+        <li>팀별 SO ARM 101 로봇 1대 (필수)<br>
+          <small style="font-size: 0.9em; color: #555;">관련 정보: <a href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank">SO-ARM100 GitHub Repository</a></small>
+        </li>
+        <li>개인 노트북</li>
+      </ul>
+    </div>
 
-    <h2><span class="emoji">🗓️</span>일정</h2>
-    <p>24시간 개방 예정</p>
+    <div class="info-card">
+      <h2><span class="emoji">📝</span>참가 신청 및 팀 구성</h2>
+      <ul>
+        <li>
+          <strong>참가 신청:</strong> <a href="https://huggingface.co/LeRobot-worldwide-hackathon" target="_blank">Hugging Face 공식 등록처 ↗️</a>
+        </li>
+        <li>
+          <strong>서울 팀원 찾기:</strong> <a href="https://discord.com/invite/s3KuuzsPFb" target="_blank">Discord 서버 ↗️</a> ("anyone in seoul" 스레드 확인)
+        </li>
+      </ul>
+    </div>
 
-    <h2><span class="emoji">🧳</span>참가자 준비물</h2>
-    <ul>
-      <li>팀별 SO ARM 101 로봇 1대 (필수)</li>
-      <li>개인 노트북</li>
-    </ul>
+    <div class="info-card">
+      <h2><span class="emoji">🏠</span>현장 시설</h2>
+      <ul>
+        <li>Wi‑Fi: SSID & 패스워드는 현장 안내</li>
+        <li>휴게룸: 24F 휴게실</li>
+      </ul>
+    </div>
 
-    <h2><span class="emoji">🏠</span>현장 시설</h2>
-    <ul>
-      <li>Wi‑Fi: SSID & 패스워드는 현장 안내</li>
-      <li>휴게룸: 24F 휴게실</li>
-    </ul>
+    <div class="info-card">
+      <h2><span class="emoji">📞</span>연락처</h2>
+      <p>
+        서울 호스트: 수도리무브 박종현<br>
+        <a href="mailto:jhpark@sudormrf.run">jhpark@sudormrf.run</a>
+      </p>
+    </div>
 
-    <h2><span class="emoji">📞</span>연락처</h2>
-    <p>
-      서울 호스트: 수도리무브 박종현<br>
-      <a href="mailto:jhpark@sudormrf.run">jhpark@sudormrf.run</a>
-    </p>
+    <div class="info-card">
+      <h2><span class="emoji">🤝</span>스폰서</h2>
+      <div style="display: flex; align-items: center; justify-content: center; padding: 1rem 0;">
+        <img src="./logos/skmysuni.png" alt="SK 마이써니 로고" style="max-height: 60px; max-width: 180px;">
+      </div>
+    </div>
 
-    <h2><span class="emoji">🤝</span>스폰서</h2>
-    <p>SK 마이써니<br>(TBD)</p>
-
-    <p><strong>✨ 준비물만 챙겨 오시면 됩니다. 현장에서 뵙겠습니다! ✨</strong></p>
+    <div class="highlight">
+      <p><strong>✨ 준비물만 챙겨 오시면 됩니다. 현장에서 뵙겠습니다! ✨</strong></p>
+    </div>
 
     <footer>
       &copy; 2025 Hackathon Organizers

@@ -174,9 +174,42 @@
     .info-card:nth-child(6) { animation-delay: 0.6s; }
     .info-card:nth-child(7) { animation-delay: 0.7s; }
     .info-card:nth-child(8) { animation-delay: 0.8s; }
+    .info-card:nth-child(9) { animation-delay: 0.9s; }
     
     .container {
       animation: fadeInUp 0.8s ease-out;
+    }
+    
+    /* FAQ Styles */
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    
+    .faq-question {
+      font-weight: 700;
+      color: #ad8bf8;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .faq-question::before {
+      content: "Q.";
+      margin-right: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .faq-answer {
+      margin-left: 1.8rem;
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+    
+    .faq-answer::before {
+      content: "A.";
+      font-weight: 700;
+      color: #c5a9f9;
+      margin-right: 0.5rem;
     }
     
     /* Mobile Responsive Styles */
@@ -309,9 +342,10 @@
     <div class="info-card">
       <h2><span class="emoji">🧳</span>참가자 준비물</h2>
       <ul>
-		  <li>팀별 SO-ARM101 등의 로봇 1대, <small style="font-size: 0.9em; color: #555;">관련 정보: <a href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank">SO-ARM GitHub</a></small> <br>로봇이 없어도 참가해서 로봇 보유 팀과 팀업 가능!<br>
+		  <li>팀별 SO-ARM101 등의 로봇 1대<small style="font-size: 0.9em; color: #555;">관련 정보: <a href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank">SO-ARM GitHub</a></small> <br>로봇이 없어도 참가해서 로봇 보유 팀과 팀업 가능!<br>
         </li>
         <li>개인 노트북</li>
+        <li>로봇의 눈이 되어줄 웹캠 (2개 이상권장)</li>
       </ul>
     </div>
 
@@ -369,9 +403,30 @@
       </div>
     </div>
 
-    <div class="highlight">
-      <p><strong>✨ 준비물만 챙겨 오시면 됩니다. 현장에서 뵙겠습니다! ✨</strong></p>
+    <div class="info-card">
+      <h2><span class="emoji">❓</span>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <div class="faq-question">팀을 미리 짜서 가도되나요? 팀이 없는데 어떻게하죠?</div>
+        <div class="faq-answer">팀은 자유롭게 구성하시면 됩니다. 미리 팀을 구성하셔도 좋고, 카카오톡 채팅방에서 하고 싶은 주제를 자유롭게 논해주시고 팀업하시기를 권장합니다! 팀이 필요하신 분들은 행사 현장에 팀구성을 도와드리겠습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">무슨 주제를 해야하나요?</div>
+        <div class="faq-answer">주제선정은 자유로우며 한정된 시간안에 할 수 있는 것을 권장합니다! 카카오톡 방에서 주제를 논의해보고 미리 팀업해보세요!
+          <br><br><strong>주제 예제들:</strong>
+          <ul style="margin-top: 0.5rem;">
+            <li>LeRobot의 Imitation Learning 튜토리얼 해보고 다른 task 해보기. ex) 커피캡슐을 커피머신에 넣기.</li>
+            <li>사람의 개입이 들어가는 온라인 강화학습</li>
+            <li>SO-ARM101 양팔 로봇을 조립해서, 수건 개기</li>
+            <li>OpenAI Speech API 사용하여 사람의 말을 마이크로 듣고 task 수행하기, 등등등.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">대회 진행이 어떻게 되나요?</div>
+        <div class="faq-answer">저희는 로컬 호스팅을 진행하며 글로벌 시상은 Huggingface 측에서 진행합니다. 그리고 스폰십으로 저희 내에서 팀별 시상식을 진행하여 상품을 준비중입니다~!</div>
+      </div>
     </div>
+
 
     <footer>
       &copy; 2025 sudoremove
